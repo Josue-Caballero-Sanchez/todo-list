@@ -1,0 +1,280 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+html,
+body{
+    height: 100vh;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header{
+    padding: 4vh;
+    background-color: #333;
+    color: white;
+    flex: 1;
+}
+
+.main-container{
+    display: flex;
+    flex: 6;
+}
+
+.sidebar-container{
+    flex: 1.15;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.center-container{
+    flex: 4;
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-button{
+    border: none;
+    background-color: #ddd;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: start;
+    padding: 2vh;
+    margin: 3vh;
+    margin-top: 4vh;
+    padding-left: 4vh;
+    border-radius: 10px;
+}
+
+.bottom-button{
+    margin-top: -2.5vh;
+    background-color: #ddd;
+    border: none;
+}
+
+.main-button:hover,
+.sidebar-button:hover{
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+.projects-text{
+    margin-left: 4vh;
+    font-weight: bold;
+}
+
+.add-project-button{
+    border: none;
+    background-color: #ddd;
+    margin-top: 2vh;
+}
+
+.center-container h2{
+    margin-left: 8vw;
+    margin-top: 5vh;
+}
+
+.main-button{
+    border: none;
+    margin-left: 8vw;
+    margin-top: 3vh;
+    font-size: 0.9rem;
+    display: block;
+    text-align: start;
+    padding: 2vh;
+    max-width: 65vw;
+    border-radius: 10px;
+    background-color: #eaeaea;
+    margin-bottom: 5vh;
+}
+
+.selected{
+    background-color: #ccc;
+}
+
+.center-container input{
+    font-size: 0.9rem;
+    padding: 2vh;
+    border-radius: 10px;
+    border: black solid 1px;
+    margin-left: 1vw;
+    flex: 15;
+}
+
+.option-button-container{
+    display: flex;
+    width: 67.5vw;
+    margin-left: 8vw;
+    gap: 2vw;
+}
+
+.option-button{
+    border: none;
+    margin-top: 2%;
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+    padding: 2vh;
+    max-width: 65vw;
+    border-radius: 10px;
+    background-color: #aaffaa;
+    flex: 1;
+    margin-bottom: 10vh;
+}
+
+.project-option-button:hover,
+.option-button:hover{
+    cursor: pointer;
+    background-color: #a6f0a6;
+}
+
+.project-cancel-button:hover,
+.cancel-button:hover{
+    background-color: #e89d9d;
+}
+
+.cancel-button{
+    background-color: #eeadad;
+}
+
+.task-container{
+    display: flex;
+    margin-left: 8vw;
+    padding: 2vh;
+    margin-top: 2vh;
+    gap: 1vw;
+    border-radius: 10px;
+    width: 63vw;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.project-container:hover,
+.task-container:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.task-name{
+    flex: 1;
+}
+
+.task-date{
+    margin-right: 1vw;
+}
+
+.delete-button{
+    font-weight: bold;
+}
+
+.project-delete-button,
+.delete-button:hover{
+    cursor: pointer;
+}
+
+.checkmark {
+    width: 70%;
+    height: 35%;
+    margin-bottom: 55%;
+    margin-left: 10%;
+}
+
+.checked-circle{
+    background-color: rgb(170, 255, 170);
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    margin-left: 7vw;
+    padding: 2vh;
+    max-width: 65.5vw;
+}
+
+.title-label{
+    flex: 1;
+}
+
+.date-label{
+    flex: 1;
+    margin-right: 1vw;
+}
+
+.project-input-box{
+    font-size: 0.9rem;
+    border-radius: 10px;
+    border: black solid 1px;
+    margin-top: 2vh;
+    width: 77%;
+    margin-left: 2vw;
+    padding: 2vh;
+}
+
+.project-option-button-container{
+    display: flex;
+    gap: 0.5vw;
+    margin-left: 2vw;
+    width: 85%;
+}
+
+.project-option-button{
+    border: none;
+    margin-top: 2%;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 2vh;
+    max-width: 65vw;
+    border-radius: 10px;
+    background-color: #aaffaa;
+    flex: 1;
+    margin-bottom: 10vh;
+}
+
+.project-cancel-button{
+    background-color: #eeadad;
+}
+
+.project-container{
+    display: flex;
+    margin-left: 1.5vw;
+    padding: 2vh;
+    gap: 1vw;
+    border-radius: 10px;
+    align-items: center;
+    width: 77%;
+    font-size: 1rem;
+    margin-top: 2vh;
+}
+
+
+.project-name{
+    flex: 10
+}
+
+.project-delete-button{
+    font-weight: bold;
+    flex: 1;
+}

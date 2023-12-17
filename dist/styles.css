@@ -55,7 +55,7 @@ header{
     margin: 3vh;
     margin-top: 4vh;
     padding-left: 4vh;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .bottom-button{
@@ -95,7 +95,7 @@ header{
     text-align: start;
     padding: 2vh;
     max-width: 65vw;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #eaeaea;
     margin-bottom: 5vh;
 }
@@ -107,7 +107,7 @@ header{
 .center-container input{
     font-size: 0.9rem;
     padding: 2vh;
-    border-radius: 10px;
+    border-radius: 5px;
     border: black solid 1px;
     margin-left: 1vw;
     flex: 15;
@@ -115,7 +115,7 @@ header{
 
 .option-button-container{
     display: flex;
-    width: 67.5vw;
+    width: 65.5vw;
     margin-left: 8vw;
     gap: 2vw;
 }
@@ -128,7 +128,7 @@ header{
     text-align: center;
     padding: 2vh;
     max-width: 65vw;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #aaffaa;
     flex: 1;
     margin-bottom: 10vh;
@@ -155,7 +155,7 @@ header{
     padding: 2vh;
     margin-top: 2vh;
     gap: 1vw;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 63vw;
     align-items: center;
     font-size: 0.8rem;
@@ -225,7 +225,7 @@ header{
 
 .project-input-box{
     font-size: 0.9rem;
-    border-radius: 10px;
+    border-radius: 5px;
     border: black solid 1px;
     margin-top: 2vh;
     width: 77%;
@@ -247,7 +247,7 @@ header{
     text-align: center;
     padding: 2vh;
     max-width: 65vw;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #aaffaa;
     flex: 1;
     margin-bottom: 10vh;
@@ -262,16 +262,16 @@ header{
     margin-left: 1.5vw;
     padding: 2vh;
     gap: 1vw;
-    border-radius: 10px;
+    border-radius: 5px;
     align-items: center;
-    width: 77%;
+    width: 80%;
     font-size: 1rem;
     margin-top: 2vh;
 }
 
 
 .project-name{
-    flex: 10
+    flex: 15
 }
 
 .project-delete-button{

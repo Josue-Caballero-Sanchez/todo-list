@@ -4,20 +4,44 @@ import { selectedMenu } from ".";
 
 function deleteButtonClicked(e){
     const splitStrings = e.target.className.split(" ");
-    const target = document.querySelector(".container" + splitStrings[1].charAt(splitStrings[1].length -1));
+    const match = splitStrings[1].match(/\d+$/);
+    let index = 0;
+
+    const target = document.querySelector(".container" + match[0]);
+    const name = document.querySelector(".task-name" + match[0]).innerHTML;
 
     while(target.firstChild){
         target.removeChild(target.firstChild);
     }
 
+    for(let i = 0; i < itemsArray.length; i++){
+        if(name === itemsArray[i].name){
+            break;
+        }
+        index++;
+    }
     target.remove();
-    itemsArray.splice(splitStrings[1].charAt(splitStrings[1].length -1), 1);
+    itemsArray.splice(index, 1);
 }
 
 function circleClicked(e){
+    if(e.target.className === "checkmark"){
+        return;
+    }
+
     const splitStrings = e.target.className.split(" ");
+    const match = splitStrings[1].match(/\d+$/);
+    const name = document.querySelector(".task-name" + match[0]).innerHTML;
+    let index = 0;
     
-    if(e.target.className === "checkmark" || itemsArray[splitStrings[1].charAt(splitStrings[1].length -1)].checked === true){
+    for(let i = 0; i < itemsArray.length; i++){
+        if(name === itemsArray[i].name){
+            break;
+        }
+        index++;
+    }
+
+    if(itemsArray[index].checked === true){
         return;
     }
     
@@ -29,7 +53,7 @@ function circleClicked(e){
 
     circle.appendChild(checkmark);
 
-    itemsArray[splitStrings[1].charAt(splitStrings[1].length -1)].checked = true;
+    itemsArray[index].checked = true;
 }
 
 export function printTask(int, task){
@@ -58,6 +82,7 @@ export function printTask(int, task){
     const taskName = document.createElement("div");
     taskName.textContent = task.name;
     taskName.classList.toggle("task-name");
+    taskName.classList.add("task-name" + int);
     taskContainer.appendChild(taskName);
 
     const taskDate = document.createElement("div");
@@ -109,6 +134,15 @@ function addButonClicked(){
     if(document.querySelector(".date-box").value === ""){
         alert("Task date can't be empty");
         return;
+    }
+
+    let name = document.querySelector(".title-box").value
+
+    for(let i = 0; i < itemsArray.length; i++){
+        if(name === itemsArray[i].name){
+            alert("Task names must be different");
+            return;
+        }
     }
 
     let date = document.querySelector(".date-box").value.split("-");

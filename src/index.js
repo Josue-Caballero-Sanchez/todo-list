@@ -2,6 +2,8 @@ import { loadToday } from "./today";
 import { loadThisWeek } from "./thisWeek";
 import { loadInbox } from "./inbox";
 import { addTaskButtonClicked } from "./inbox";
+import { addProjectButtonClicked } from "./project";
+import { projectsArray } from "./project";
 
 export function clearPage(){
     let container = document.querySelector(".center-container");
@@ -24,8 +26,14 @@ export function clearPage(){
                 thisWeekButton.classList.toggle("selected");
             }
         }
-        
-        
+
+        if(projectsArray.length != 0){
+            const projectContainers = document.querySelectorAll(".project-container");
+            for(let i = 0; i < projectContainers.length; i++){
+                projectContainers[i].classList.remove("selected");
+            }
+        }
+
 
         selectedMenu = 1;
         inboxButton.classList.toggle("selected");
@@ -44,6 +52,13 @@ export function clearPage(){
             }
             else{
                 thisWeekButton.classList.toggle("selected");
+            }
+        }
+
+        if(projectsArray.length != 0){
+            const projectContainers = document.querySelectorAll(".project-container");
+            for(let i = 0; i < projectContainers.length; i++){
+                projectContainers[i].classList.remove("selected");
             }
         }
         
@@ -67,6 +82,13 @@ export function clearPage(){
             }
         }
         
+        if(projectsArray.length != 0){
+            const projectContainers = document.querySelectorAll(".project-container");
+            for(let i = 0; i < projectContainers.length; i++){
+                projectContainers[i].classList.remove("selected");
+            }
+        }
+        
 
         selectedMenu = 3;
         thisWeekButton.classList.toggle("selected");
@@ -82,11 +104,13 @@ export function clearPage(){
     const todayButton = document.querySelector("#today-button");
     const thisWeekButton = document.querySelector("#this-week-button");
     const addTaskButton = document.querySelector(".main-button");
+    const addProjectButton = document.querySelector(".add-project-button");
 
     
     inboxButton.addEventListener("click", inboxButtonClicked);
     todayButton.addEventListener("click", todayButtonClicked);
     thisWeekButton.addEventListener("click", thisWeekButtonClicked);
     addTaskButton.addEventListener("click", addTaskButtonClicked);
+    addProjectButton.addEventListener("click", addProjectButtonClicked);
 
 
